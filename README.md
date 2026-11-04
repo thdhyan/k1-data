@@ -9,6 +9,24 @@ Rosbag, stereo/walk tooling, real-robot converters.
 | Files / LOC | 10 files · 877 lines (py, sh, cpp) |
 | Part of | [k1-workspace](https://github.com/thdhyan/k1-workspace) (architecture and layering rules live there) |
 
+## Where it sits
+
+```mermaid
+flowchart TB
+  k1_common[k1-common]
+  k1_perception[k1-perception]
+  k1_deploy_robot[k1-deploy-robot]
+  k1_data((k1-data))
+  style k1_data fill:#e8833a,color:#000
+  k1_perception --> k1_data
+  k1_deploy_robot --> k1_data
+  k1_data --> k1_common
+```
+
+Used by: k1-perception, k1-deploy-robot.
+
+![k1-workspace layers](https://raw.githubusercontent.com/thdhyan/k1-workspace/main/docs/img/architecture.png)
+
 ## Install
 
 Not an installable library: clone it and run the scripts in place.
@@ -19,6 +37,7 @@ git clone https://github.com/thdhyan/k1-data
 ## Layout
 
 ```
+README.md
 pyproject.toml
 real_robot/  (11 files)
   README.md
