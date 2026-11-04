@@ -34,6 +34,31 @@ Not an installable library: clone it and run the scripts in place.
 git clone https://github.com/thdhyan/k1-data
 ```
 
+## Usage
+
+Data tools for real-robot recordings. Not an installable library: run the scripts in place from `real_robot/`.
+
+| Script | What |
+|---|---|
+| `query_cameras.py`, `grab_intrinsics.py` | camera list and intrinsics from a robot |
+| `check_topics.sh`, `check_bag_freshness.py`, `verify_bag.py` | rosbag checks |
+| `extract_frames.py`, `bag2edex.py` | bag -> frames / EDEX |
+| `sftp_sync.sh` | pull recordings from a robot |
+
+Robot addresses: [docs/ROBOTS.md](https://github.com/thdhyan/k1-workspace/blob/main/docs/ROBOTS.md).
+
+## Tests
+
+No tests yet.
+
+## Robots and hosts
+
+Robot IPs, SSH aliases, network, safety and how to control each robot: [docs/ROBOTS.md](https://github.com/thdhyan/k1-workspace/blob/main/docs/ROBOTS.md) in k1-workspace.
+
+## Environment variables read
+
+none
+
 ## Layout
 
 ```
@@ -61,6 +86,12 @@ real_robot/  (11 files)
 ## Hard-coded paths into other repos
 
 None.
+
+## Old `booster_ws` layout still referenced
+
+These files still name `booster_ws`, `isaac_tasks/` or `booster_train_ref` paths (container scripts not ported yet, or docstrings):
+
+- `real_robot/config/env.sh`
 
 ## Origin
 
