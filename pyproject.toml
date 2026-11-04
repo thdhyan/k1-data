@@ -1,0 +1,20 @@
+[project]
+name = "k1-data"
+version = "0.1.0"
+description = "Rosbag, stereo/walk tooling, real-robot converters."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "opencv-python",
+  "pyyaml",
+  "k1-common",
+]
+
+[tool.uv.sources]
+k1-common = { git = "https://github.com/thdhyan/k1-common" }
+
+[tool.uv]
+package = false  # scripts / ROS packages, not an importable library
+
+# Provided by the environment (ROS 2, Isaac Sim/Lab, mjlab, robot SDK) or not on PyPI under this name:
+# booster_robotics_sdk_python, rclpy, rosbag2_py, rosidl_runtime_py, sensor_msgs
